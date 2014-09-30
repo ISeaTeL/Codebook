@@ -6,6 +6,7 @@ all::$(TARGET)
 
 $(TARGET):
 	$(LATEX) $(SOURCE)
+	rm *.log *.aux
 
 .PHONY: clean
 clean:
