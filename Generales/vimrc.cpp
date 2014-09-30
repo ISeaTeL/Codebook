@@ -1,15 +1,15 @@
+" basic setting
 set ts=4
-set bs=2		" allow backspacing over everything in insert mode
-set ruler		" show the cursor position all the time
+set bs=2
+set ruler
 set nu
-syntax on		" syntax highlight
-set hlsearch		" search highlighting
-set showmatch		" Cursor shows matching ) and }
-set showmode		" Show current mode
-set autoindent		" auto indentation
-set incsearch		" incremental search
-set nobackup		" no *~ backup files
-set copyindent		" copy the previous indentation on autoindenting
+syntax on
+set hlsearch
+set showmatch
+set showmode
+set autoindent
+set incsearch
+set copyindent
 
 " set leader to ,
 let mapleader=","
