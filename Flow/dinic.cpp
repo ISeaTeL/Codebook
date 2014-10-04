@@ -7,20 +7,20 @@ using namespace std;
 
 #define INF 1e9
 #define MAX_V 1000
-// 表示邊的結構（目標, 容量, 相反邊）
+// Edge structure (Target, capacity, reverse edge)
 struct edge{int to, cap, rev;};
 
-vector<edge> G[MAX_V];// 圖的相鄰串接列表現方式
-int level[MAX_V];// 到s的距離
-int iter[MAX_V];// 調查到哪裡了呢，在此之前的邊已無作用了
+vector<edge> G[MAX_V];// adjacency list to store graph
+int level[MAX_V];// distance to s
+int iter[MAX_V];// iteration to where, those edge which is in front of the edge is useless
 
-// 將從from到to且容量為cap的邊新增至圖中
+// Add an edge which is from 'from' to 'to' and its capacity is cap
 void add_edge(int from, int to, int cap)
 {
 	G[from].push_back((edge){to, cap, G[to].size()});
 	G[to].push_back((edge){from, 0, G[from].size()-1});
 }
-// 以BFS計算到s的最短距離
+// Get min dis to s by BFS
 void bfs(int s)
 {
 	memset(level, -1, sizeof(level));
@@ -39,7 +39,7 @@ void bfs(int s)
 
 	}
 }
-// 以DFS尋找增加路徑
+// Search and add path by DFS
 int dfs(int v, int t, int f)
 {
 	if(v==t)return f;
@@ -57,7 +57,7 @@ int dfs(int v, int t, int f)
 	return 0;	
 }
 
-// 求取從s到t的最大流量
+// get max flow from s to t
 int max_flow(int s, int t)
 {
 	int flow=0;

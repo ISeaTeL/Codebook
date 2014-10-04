@@ -2,7 +2,7 @@
 
 vector<int> v[MAXN]; //adjacency list
 bool rec[MAXN];
-int clk[MAXN], low[MAXN], time, ct; //ct: 計算AP個數
+int clk[MAXN], low[MAXN], time, ct; //ct: the # of AP
 
 void dfs(int x, int parent){
 	rec[x] = 1;
@@ -24,5 +24,5 @@ void dfs(int x, int parent){
 		}
 	}
 	if(x == parent && child > 1 || x != parent && ap)
-		ct++; //第 x 點是關節點";
+		ct++; //x-th pt is an AP
 }

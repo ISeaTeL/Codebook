@@ -1,6 +1,6 @@
 \documentclass[a4paper]{amsart}
 %\usepackage[pdftex]{geometry}
-%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[left=1cm, right=1cm, top=1.2cm, bottom=2cm]{geometry}
 \usepackage{listings}
 \usepackage{amssymb}
@@ -66,14 +66,15 @@
     \includecpp{MinCostMatching}{./Graph}{MinCostMatching.cpp}
     \includecpp{MinCut}{./Graph}{MinCut.cpp}
     \includecpp{SCC}{./Graph}{SCC.cpp}
+    \includecpp{AP}{./Graph}{AP.cpp}
   
   \section{Geometry}   
     \includecpp{Geometry}{./Geometry}{Geometry.cpp}
     
-  \section{Number Theory}
-    \includecpp{Euclid}{./NumberTheory}{Euclid.cpp}
-    \includecpp{FFT}{./NumberTheory}{FFT.cpp}
-    \includecpp{GaussJordan}{./NumberTheory}{GaussJordan.cpp}
+  \section{Math}
+    \includecpp{Euclid}{./Math}{Euclid.cpp}
+    \includecpp{FFT}{./Math}{FFT.cpp}
+    \includecpp{GaussJordan}{./Math}{GaussJordan.cpp}
 
   \section{Problems}
     \includecpp{LCA}{./Problems}{LCA.cpp}
@@ -85,7 +86,7 @@
   \section{Other}
     \includecpp{Merge Sort}{./Other}{Mergesort.cpp}
      
-  \section{Math}
+  \section{Math Rules}
     \subsection{Catalan Number}
     	Binary trees with $n+1$ vertices.
       \begin{equation*}

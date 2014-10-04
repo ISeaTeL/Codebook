@@ -50,12 +50,8 @@ int KMP(string& s, string& w)
 
 int main()
 {
-  string a = (string) "The example above illustrates the general technique for assembling "+
-    "the table with a minimum of fuss. The principle is that of the overall search: "+
-    "most of the work was already done in getting to the current position, so very "+
-    "little needs to be done in leaving it. The only minor complication is that the "+
-    "logic which is correct late in the string erroneously gives non-proper "+
-    "substrings at the beginning. This necessitates some initialization code.";
+  string a = (string) "The example above the general technique for "+
+    "the table with a minimum of fuss. The principle is the search: ...";
   
   string b = "table";
   

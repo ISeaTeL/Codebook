@@ -2,7 +2,8 @@ const int max_nodes, log_max_nodes;
 int num_nodes, log_num_nodes, root;
 
 vector<int> children[max_nodes];	// children[i] contains the children of node i
-int A[max_nodes][log_max_nodes+1];	// A[i][j] is the 2^j-th ancestor of node i, or -1 if that ancestor does not exist
+int A[max_nodes][log_max_nodes+1];
+// A[i][j] is the 2^j-th ancestor of node i, or -1 if that ancestor does not exist
 int L[max_nodes];			// L[i] is the distance between node i and the root
 
 // floor of the binary logarithm of n
